@@ -2,74 +2,77 @@
 <html>
 <head>
 	<title>xivz.net</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="favicon.png">
+	<meta charset="UTF-8">
+	<link rel="icon" href="favicon.ico">
 	<style>
 		body {
-			background-color: #333333;
-			color: #ffffff;
+			background-color: #333;
+			color: #eee;
 			font-family: Arial, sans-serif;
 			font-size: 16px;
-			line-height: 1.4;
+			line-height: 1.5;
 			margin: 0;
 			padding: 0;
 		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-		.title {
-			font-size: 72px;
-			font-weight: bold;
+
+		#title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			text-align: center;
-			margin: 0;
-			padding: 0;
+			font-size: 48px;
+			font-weight: bold;
+			cursor: pointer;
 			transition: opacity 0.5s ease-in-out;
 		}
-		.title:hover {
-			opacity: 0.7;
+
+		#title:hover {
+			opacity: 0.5;
 		}
-		.subdomains {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			margin-top: 50px;
+
+		#gui {
+			margin: 50px auto 0;
+			width: 80%;
+			max-width: 600px;
+			background-color: #eee;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 		}
-		.subdomain {
-			width: 200px;
-			height: 200px;
-			background-color: #ffffff;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin: 20px;
-			font-size: 24px;
+
+		#gui ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		#gui li {
+			margin-bottom: 10px;
+		}
+
+		#gui a {
+			color: #333;
+			text-decoration: none;
 			font-weight: bold;
-			text-align: center;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-			transition: transform 0.5s ease-in-out;
+			font-size: 24px;
+			transition: color 0.2s ease-in-out;
 		}
-		.subdomain:hover {
-			transform: scale(1.1);
-			box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+
+		#gui a:hover {
+			color: #666;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<h1 class="title">xivz.net</h1>
-		<div class="subdomains">
-			<div class="subdomain">home</div>
-			<div class="subdomain">vpn</div>
-		</div>
+	<div id="title">xivz.net</div>
+	<div id="gui">
+		<ul>
+			<li><a href="#">subdomain1.xivz.net</a></li>
+			<li><a href="#">subdomain2.xivz.net</a></li>
+			<li><a href="#">subdomain3.xivz.net</a></li>
+			<li><a href="#">subdomain4.xivz.net</a></li>
+		</ul>
 	</div>
 </body>
 </html>
