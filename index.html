@@ -2,30 +2,74 @@
 <html>
 <head>
 	<title>xivz.net</title>
-	<meta charset="UTF-8">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="favicon.png">
 	<style>
 		body {
-			background-color: #333;
-			color: #eee;
+			background-color: #333333;
+			color: #ffffff;
 			font-family: Arial, sans-serif;
 			font-size: 16px;
-			line-height: 1.5;
+			line-height: 1.4;
 			margin: 0;
 			padding: 0;
 		}
-		h1 {
-			text-align: center;
-			margin-top: 50px;
-			font-size: 48px;
-			transition: opacity 0.5s;
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
 		}
-		h1:hover {
-			opacity: 0.8;
+		.title {
+			font-size: 72px;
+			font-weight: bold;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+		.title:hover {
+			opacity: 0.7;
+		}
+		.subdomains {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+		}
+		.subdomain {
+			width: 200px;
+			height: 200px;
+			background-color: #ffffff;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 20px;
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+			transition: transform 0.5s ease-in-out;
+		}
+		.subdomain:hover {
+			transform: scale(1.1);
+			box-shadow: 0 4px 20px rgba(0,0,0,0.7);
 		}
 	</style>
 </head>
 <body>
-	<h1>xivz.net</h1>
+	<div class="container">
+		<h1 class="title">xivz.net</h1>
+		<div class="subdomains">
+			<div class="subdomain">home</div>
+			<div class="subdomain">vpn</div>
+		</div>
+	</div>
 </body>
 </html>
